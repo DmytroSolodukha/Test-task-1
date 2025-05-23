@@ -30,21 +30,32 @@
 
   Main file on server part, main.ts, is located in src folder. 
   Responsibilities of other folders in src: 
+
     1.1 Auth and openai-requests: auth and ai routes
+
     1.2 db: connection to Mongo database
+
     1.3 validation: responsible for validation of incoming data
+
     1.4 middlewares: have middleware that validates access token
 
 2. Frontend 
 
   Main file is main.tsx, that is located in src folder too.
   Responsibilities of other folders and files in src: 
+
     2.1 App.tsx: responsible for route management
+
     2.2 index.css: imports tailwind, which i use in my project to add styles
+
     2.3 pages: contains all pages
+
     2.4 components: contains other small components
+
     2.5 contexts: contains context providers
+
     2.6 types: contains exported types
+    
     2.7 api: responsible for requests to server
 
 ## AI API 
