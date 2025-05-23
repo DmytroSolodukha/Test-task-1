@@ -12,12 +12,7 @@ const HomePage = () => {
     const modalsData = useContext(ModalsContext);
     const user = useContext(UserContext);
     if (!user || !modalsData) return;
-    const [requests, setRequests] = useState([
-        { _id: 14324234234, prompt: 'fdsfsdfdsf' },
-        { _id: 14324234232234, prompt: 'dsfdsfsf' },
-        { _id: 1435234234, prompt: 'reterter' },
-        { _id: 143345234234, prompt: 'tertert' },
-    ]);
+    const [requests, setRequests] = useState([]);
     const [newRequestText, setNewRequestText] = useState('');
     const navigate = useNavigate();
 
@@ -25,9 +20,7 @@ const HomePage = () => {
         if (!user || !user.user) return;
         try {
             const response = await getRequestsByUserId(user.user._id);
-            console.log(response);
-
-            //! setRequests(response);  uncomment this to fetch requests
+            setRequests(response);
         } catch (err) {
             toast.error((err as ModifiedAxiosError).message);
         }

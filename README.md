@@ -31,7 +31,7 @@
   2.3 To run:
 
     npm run preview / yarn preview
-
+    
 ## Architecture
 
 ### 1. Backend

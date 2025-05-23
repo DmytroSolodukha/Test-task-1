@@ -11,25 +11,8 @@ interface Request {
 
 const RequestPage: React.FC = () => {
     const { id } = useParams<{ id: string }>();
-    const [request, setRequest] = useState<Request | null>({
-        _id: id,
-        prompt: 'fdsfsdfdsf',
-        response: 'fsdfsdfsdfds',
-    });
-    const [previousRequests, setPreviousRequests] = useState<Request[]>([
-        { _id: '14324234234', prompt: 'dsfdsfsf', response: 'fdsgdfgdfgdfgfd' },
-        {
-            _id: '14324234232234',
-            prompt: 'reterter',
-            response: 'fgfdgfdgjnsfkdsnfk',
-        },
-        { _id: '1435234234', prompt: 'dsfdsfsf', response: 'rfgndfgidfogid' },
-        {
-            _id: '143345234234',
-            prompt: 'tertert',
-            response: 'fdgjdfngkndfgkjnfd',
-        },
-    ]);
+    const [request, setRequest] = useState<Request | null>(null);
+    const [previousRequests, setPreviousRequests] = useState<Request[]>([]);
     const user = useContext(UserContext);
 
     useEffect(() => {
@@ -37,13 +20,12 @@ const RequestPage: React.FC = () => {
             if (!id || !user || !user.user || !user.token) return;
 
             try {
-                //! uncomment this to fetch request
-                // const response = await getRequestById(id);
-                // const requestData: Request = await response.json();
+                const response = await getRequestById(id);
+                const requestData: Request = await response.json();
                 setRequest(requestData);
             } catch (error) {
                 console.error('Error fetching request:', error);
-                // setRequest(null);
+                setRequest(null);
             }
         };
 
