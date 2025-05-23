@@ -54,3 +54,19 @@ I chose OpenAI. That's an easy and effective choice for simple tasks like that.
 # Plans 
 
 To improve my project, at first, i'd like to add better styles. Additionally i want to add  user profile page and abilities to have avatar and change password.  
+
+
+
+## Preliminary Questions
+
+  1. It was fullstack project. I used Node.js with Express.js on backend and React on frontend. I used lots of libraries such as axios, redux with redux-toolkit and so on. Additionally i used MongoDB as database, Cloudinary as storage for images.
+
+  2. To be honest i have no experience in python.
+
+  3. Yes
+
+  4. No experience
+
+  5. No, don't know about this protocol.
+
+  6. 
