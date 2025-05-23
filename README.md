@@ -1,27 +1,27 @@
 # How to setup?
 
 1. Backend setup:
-  1) Change directory to /server folder:
+  1.1 Change directory to /server folder:
     cd ./server
 
-  2) Install packages: 
+  1.2 Install packages: 
     npm i / yarn
 
-  3) Add environment variables from .env.example file to .env
+  1.3 Add environment variables from .env.example file to .env
 
-  4) To run server:
+  1.4 To run server:
     npm run start / yarn start
 
 
 
 2. Frontend setup 
-  1) Change directory to /client folder:
+  2.1 Change directory to /client folder:
     cd ./client (or cd ../client if you are in /server folder)
 
-  2) Install packages: 
+  2.2 Install packages: 
     npm i / yarn
 
-  3) To run:
+  2.3 To run:
     npm run preview / yarn preview
 
 # AI API 
