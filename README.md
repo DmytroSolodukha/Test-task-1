@@ -24,9 +24,32 @@
   2.3 To run:
     npm run preview / yarn preview
 
+# Architecture
+
+1. Backend
+
+  Main file on server part, main.ts, is located in src folder. 
+  Responsibilities of other folders in src: 
+    * Auth and openai-requests: auth and ai routes
+    * db: connection to Mongo database
+    * validation: responsible for validation of incoming data
+    * middlewares: have middleware that validates access token
+
+2. Frontend 
+
+  Main file is main.tsx, that is located in src folder too.
+  Responsibilities of other folders and files in src: 
+    * App.tsx: responsible for route management
+    * index.css: imports tailwind, which i use in my project to add styles
+    * pages: contains all pages
+    * components: contains other small components
+    * contexts: contains context providers
+    * types: contains exported types
+    * api: responsible for requests to server
+
 # AI API 
 
-I chose OpenAI. That's easy and effective choice for tasks like that.
+I chose OpenAI. That's an easy and effective choice for simple tasks like that.
 
 # Plans 
 

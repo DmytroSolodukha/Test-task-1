@@ -24,12 +24,6 @@ import { OpenaiRequestsModule } from './openai-requests/openai-requests.module';
         OpenaiRequestsModule,
     ],
     controllers: [AppController],
-    providers: [
-        AppService,
-        // {
-        //     provide: APP_FILTER,
-        //     useClass: AllExceptionsFilter,
-        // },
-    ],
+    providers: [AppService],
 })
 export class AppModule {}
