@@ -85,5 +85,3 @@ To improve my project, at first, i'd like to add better styles. Additionally i w
   4. No experience
 
   5. No, don't know about this protocol.
-
-  6. 
