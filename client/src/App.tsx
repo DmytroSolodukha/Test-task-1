@@ -16,9 +16,7 @@ function App() {
             if (!user) return;
             if (user.token) {
                 try {
-                    console.log(user.token);
                     const res = await refreshUser(user.token);
-                    console.log(res);
 
                     localStorage.setItem(
                         'accessToken',

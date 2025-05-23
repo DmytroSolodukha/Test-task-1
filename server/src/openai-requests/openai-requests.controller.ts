@@ -35,7 +35,6 @@ export class OpenaiRequestsController {
         @Req() req: Request
     ): Promise<OpenaiRequest> {
         const [bearer, token] = req.headers.authorization.split(' ');
-        console.log(token);
         const data = await this.sessionModel
             .findOne({ accessToken: token })
             .exec();

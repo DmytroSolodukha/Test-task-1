@@ -34,7 +34,6 @@ export class AuthService {
     async loginUser(email: string, password: string) {
         try {
             const user = await this.findUser(email);
-            console.log(user);
 
             if (!user)
                 throw new HttpException(
@@ -61,8 +60,6 @@ export class AuthService {
             const prevSession = await this.findSession({
                 userId: user._id as Schema.Types.ObjectId,
             });
-
-            console.log(prevSession);
 
             if (prevSession) {
                 const res = await this.sessionModel.deleteOne({

@@ -12,7 +12,6 @@ export function clearAuthHeader() {
 export async function loginUser(payload: { email: string; password: string }) {
     try {
         const data = await axios.post('/auth/login', payload);
-        console.log(data);
 
         return data;
     } catch (err) {
@@ -26,7 +25,6 @@ export async function registerUser(payload: {
 }) {
     try {
         const data = await axios.post('/auth/register', payload);
-        console.log(data);
 
         return data;
     } catch (err) {

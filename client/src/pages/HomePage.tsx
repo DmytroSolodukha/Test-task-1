@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect } from 'react';
+import { useContext, useState, useEffect, type ChangeEvent } from 'react';
 import AuthModal from '../components/Modals/AuthModal';
 import { Button } from '@mui/material';
 import { ModalsContext } from '../contexts/ModalsContext';
@@ -26,11 +26,11 @@ const HomePage = () => {
         }
     };
 
-    const handleInputChange = event => {
+    const handleInputChange = (event: ChangeEvent) => {
         setNewRequestText(event.target.value);
     };
 
-    const handleFormSubmit = async event => {
+    const handleFormSubmit = async (event: SubmitEvent) => {
         event.preventDefault();
 
         if (newRequestText.trim() === '') {
@@ -55,6 +55,7 @@ const HomePage = () => {
             }
             fetchRequests();
         } catch (error) {
+            toast.error((error as ModifiedAxiosError).message);
             console.error('Error creating request:', error);
         }
     };

@@ -4,8 +4,6 @@ import { AppService } from './app.service';
 import { AuthModule } from './auth/auth.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
-import { APP_FILTER } from '@nestjs/core';
-import { AllExceptionsFilter } from './middlewares/exceptions.filter';
 import { OpenaiRequestsModule } from './openai-requests/openai-requests.module';
 
 @Module({
