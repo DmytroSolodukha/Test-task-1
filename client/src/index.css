@@ -1,0 +1,23 @@
+@import 'modern-normalize';
+@import 'tailwindcss';
+
+@layer base {
+    input {
+        @apply border-1 rounded-2xl  p-2 pl-[16px]  w-[40vw];
+    }
+    label {
+        @apply flex flex-col gap-2;
+        p {
+            @apply pl-[16px];
+        }
+    }
+}
+
+@layer components {
+    .formik-label {
+        @apply relative;
+    }
+    .formik-error-message {
+        @apply p-0 absolute -bottom-5 left-[16px] text-red-500;
+    }
+}
