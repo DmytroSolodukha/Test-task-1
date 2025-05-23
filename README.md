@@ -3,10 +3,12 @@
 ### 1. Backend setup:
 
   1.1 Change directory to /server folder:
+  
     cd ./server
 
   1.2 Install packages: 
-    npm i / yarn
+
+    npm install / yarn
 
   1.3 Add environment variables from .env.example file to .env
 
